@@ -1,0 +1,94 @@
+    <!-- ======= Intro Section ======= -->
+    {% for home in home %}
+    <!-- <div id="home" class="intro route bg-image" style="background-image: url(assets/img/intro-bg.jpg)"> -->
+      <div id="home" class="intro route bg-image" style="background-color:#000000;">
+       
+      <div class="overlay-itro"></div>
+      <div class="intro-content display-table">
+        <div class="table-cell">
+          <div class="container">
+            <!--<p class="display-6 color-d">Hello, world!</p>-->
+            <h1 class="intro-title mb-4">{{ home.name }}</h1>
+            <p class="intro-subtitle"><span class="text-slider-items" >{{ home.intro}}</span><strong  class="text-slider"></strong></p>
+            <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
+          </div>
+        </div>
+      </div>
+    </div><!-- End Intro Section -->
+  
+  
+  
+  
+    <main id="main">
+  
+      <!-- ======= About Section ======= -->
+      <section id="about" class="about-mf sect-pt4 route">
+     
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="box-shadow-full">
+                <div class="row">
+                  <div class="col-md-6">
+                  
+                    <div class="row">
+                      <div class="col-sm-6 col-md-5">
+                        <div class="about-img">
+                          <img src="{{home.image.url}}" class="img-fluid rounded b-shadow-a" alt="">
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-7">
+                        <div class="about-info">
+                          <p><span class="title-s">Name: </span> <span>{{ home.skill_name }}</span></p>
+                          <p><span class="title-s">Profile: </span> <span> {{home.profile}} </span></p>
+                          <p><span class="title-s">Email: </span> <span><a href="">{{  home.email }}</a></span></p>
+                          <p><span class="title-s">Phone: </span> <span>{{ home.phone }}</span></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="skill-mf">
+                      <p class="title-s">Technologise that i use:</p>                  
+                      <ul style="list-style: none;">
+                        <li><i class="fab fa-html5"> </i>HTMl</li>
+                        <li><i class="fab fa-css3"></i>CSS</li>
+                        <li><i class="fab fa-python"></i>Python</li>
+                        <li><i class="fab fa-bootstrap"></i>BootStrap</li>
+                        <li><i class="fab fa-js-square"></i>JavaScript</li>
+                      </ul>
+                      <!-- <div class="progress">
+  
+                        <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div> -->
+                      <!-- <span>CSS3</span> <span class="pull-right">75%</span>
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 76%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <span>PHP</span> <span class="pull-right">50%</span>
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <span>JAVASCRIPT</span> <span class="pull-right">90%</span>
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div> -->
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="about-me pt-4 pt-md-0">
+                      <div class="title-box-2">
+                        <h5 class="title-left">
+                          About me
+                        </h5>
+                      </div>
+                      <p class="lead">
+                        {{home.about}}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {% endfor %}<!-- End About Section -->
