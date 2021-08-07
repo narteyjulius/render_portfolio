@@ -26,7 +26,6 @@ class Project(models.Model):
     description = models.TextField(max_length=500, blank=True)
     title = models.CharField(max_length=50, blank=True)
     image = models.ImageField(blank=True)
-    image1 = models.ImageField(blank=True)
     link = models.URLField(blank=True)
 
     def __str__(self):
