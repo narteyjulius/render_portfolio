@@ -14,3 +14,20 @@ class Home(models.Model):
 
     def __str__(self):
         return self.name
+
+class Touch(models.Model):
+    lead = models.TextField(max_length=500, blank=True)
+    location = models.CharField(max_length=100, blank=True)
+    telephone = models.CharField(max_length=20, blank=True)
+    email = models.EmailField(blank=True)
+
+
+class Project(models.Model):
+    description = models.TextField(max_length=500, blank=True)
+    title = models.CharField(max_length=50, blank=True)
+    image = models.ImageField(blank=True)
+    image1 = models.ImageField(blank=True)
+    link = models.URLField(blank=True)
+
+    def __str__(self):
+        return self.title

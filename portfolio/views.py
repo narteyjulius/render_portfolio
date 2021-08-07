@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Home
+from .models import Home, Touch, Project
 
 
 from django.core.mail import send_mail, BadHeaderError
@@ -11,6 +11,10 @@ from .forms import ContactForm
 
 def home_list(request):
     home = Home.objects.all()
+    touch = Touch.objects.all()
+    project = Project.objects.all()
+
+
     if request.method == 'GET':
         form = ContactForm()
     else:
@@ -19,31 +23,19 @@ def home_list(request):
             subject = form.cleaned_data['subject']
             from_email = form.cleaned_data['from_email']
             message = form.cleaned_data['message']
+
+            # send_mail(subject, message, from_email, ['julius.nartey.71@gmail.com'])
+
+
             try:
-                send_mail(subject, message, from_email, ['admin@example.com'])
+                send_mail(subject, message,from_email,  ['julius.nartey.71@gmail.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
-            return redirect( 'portfolio:home_list')
-    return render(request, 'portfolio/base.html', {'form': form, 'home':home})
+        return redirect( 'portfolio:home_list')
+    return render(request, 'portfolio/base.html', {'form': form, 
+                                                    'home':home, 
+                                                    'touch':touch,
+                                                    'project':project})
 
     # return render(request, 'portfolio/base.html', {'home':home})
 
-
-# def contactView(request):
-#     if request.method == 'GET':
-#         form = ContactForm()
-#     else:
-#         form = ContactForm(request.POST)
-#         if form.is_valid():
-#             subject = form.cleaned_data['subject']
-#             from_email = form.cleaned_data['from_email']
-#             message = form.cleaned_data['message']
-#             try:
-#                 send_mail(subject, message, from_email, ['admin@example.com'])
-#             except BadHeaderError:
-#                 return HttpResponse('Invalid header found.')
-#             return redirect('success')
-#     return render(request, "contact.html", {'form': form})
-
-# def successView(request):
-#     return HttpResponse('Success! Thank you for your message.')
