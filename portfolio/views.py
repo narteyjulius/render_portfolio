@@ -14,7 +14,6 @@ def home_list(request):
     touch = Touch.objects.all()
     project = Project.objects.all()
 
-
     if request.method == 'GET':
         form = ContactForm()
     else:
@@ -24,18 +23,23 @@ def home_list(request):
             from_email = form.cleaned_data['from_email']
             message = form.cleaned_data['message']
 
-            # send_mail(subject, message, from_email, ['julius.nartey.71@gmail.com'])
+            send_mail( subject,
+                        message, from_email, 
+                        ['julius.nartey.71@gmail.com'])
 
 
             try:
-                send_mail(subject, message,from_email,  ['julius.nartey.71@gmail.com'])
+                send_mail( subject, 
+                            message,
+                            from_email,
+                            ['julius.nartey.71@gmail.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
         return redirect( 'portfolio:home_list')
+
     return render(request, 'portfolio/base.html', {'form': form, 
                                                     'home':home, 
                                                     'touch':touch,
                                                     'project':project})
-
-    # return render(request, 'portfolio/base.html', {'home':home})
+                                                    
 
