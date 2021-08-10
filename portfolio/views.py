@@ -66,7 +66,7 @@ def home_list(request):
                             ['sylarnano688@gmail.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
-            return redirect( 'portfolio:home_list')
+        return redirect( 'portfolio:home_list')
 
     return render(request, 'portfolio/base.html', {'form': form, 
                                                     'home':home, 

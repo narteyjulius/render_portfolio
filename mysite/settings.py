@@ -179,7 +179,7 @@ EMAIL_PORT = '587'
 EMAIL_USE_TLS = True
 # EMAIL_HOST_USER = 'julius.nartey.71@gmail.com'
 EMAIL_HOST_USER = 'sylarnano688@gmail.com'
-EMAIL_HOST_PASSWORD = 'superboy1z'
+EMAIL_HOST_PASSWORD = 'ozaxdfucozadbnyu'
 
 
 # AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
