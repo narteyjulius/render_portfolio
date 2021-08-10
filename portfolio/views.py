@@ -60,7 +60,7 @@ def home_list(request):
             #             message, from_email, 
             #             ['julius.nartey.71@gmail.com'])
             try:
-                send_mail( subject, 
+                send_mail(subject, 
                             message,
                             from_email,
                             ['julius.nartey.71@gmail.com'])
