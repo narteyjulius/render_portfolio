@@ -33,8 +33,8 @@ environ.Env.read_env()
 SECRET_KEY= 'django-insecure-q)2$##7$5s@v+a9=1v$@cxkm8-@wx_#yntjt203@-cn9*etw%j'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = False
+DEBUG = True
+# DEBUG = False
 # DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = ['*', '.herokuapp.com']
