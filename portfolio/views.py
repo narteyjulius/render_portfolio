@@ -56,9 +56,9 @@ def home_list(request):
             from_email = form.cleaned_data['from_email']
             message = form.cleaned_data['message']
 
-            send_mail( subject,
-                        message, from_email, 
-                        ['julius.nartey.71@gmail.com'])
+            # send_mail( subject,
+            #             message, from_email, 
+            #             ['julius.nartey.71@gmail.com'])
             try:
                 send_mail( subject, 
                             message,
@@ -66,7 +66,7 @@ def home_list(request):
                             ['julius.nartey.71@gmail.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
-        return redirect( 'portfolio:home_list')
+            return redirect( 'portfolio:home_list')
 
     return render(request, 'portfolio/base.html', {'form': form, 
                                                     'home':home, 
