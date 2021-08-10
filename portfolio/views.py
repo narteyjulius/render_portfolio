@@ -63,7 +63,7 @@ def home_list(request):
                 send_mail(subject, 
                             message,
                             from_email,
-                            ['julius.nartey.71@gmail.com'])
+                            ['sylarnano688@gmail.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect( 'portfolio:home_list')
