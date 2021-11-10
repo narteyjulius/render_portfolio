@@ -111,17 +111,6 @@ DATABASES = {
 }
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'sylarport',
-#         'USER': 'postgres',
-#         'PASSWORD':'12345',
-#         'HOST': 'localhost',
-#         'PORT': '5432',
-#     }
-# }
-
 
 # DATABASES = {
 #     'default': {

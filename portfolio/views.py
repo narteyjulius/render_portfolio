@@ -52,12 +52,4 @@ def home_list(request):
                                                     'project':project})
 
 
-# class ContactView(FormView):
-#     template_name = 'portfolio/contact.html'
-#     form_class = ContactForm
-#     success_url = reverse_lazy('portfolio:home_list')
-
-#     def form_valid(self, form):
-#         form.send()
-#         return super().form_valid(form)
 
