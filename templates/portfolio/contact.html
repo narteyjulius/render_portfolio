@@ -1,66 +1,71 @@
 {% load crispy_forms_tags %}
- 
- <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(assets/img/overlay-bg.jpg)">
-    <div class="overlay-mf"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="contact-mf">
-            <div id="contact" class="box-shadow-full">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="title-box-2">
-                    <h5 class="title-left">
-                     Message Me
-                    </h5>
-                  </div>
-                  <div>
-                    <div class="row">
-                      <div class="col-md-12 mb-3">
+
+<section class="paralax-mf footer-paralax bg-image sect-mt4 route"
+  style="background-image: url(assets/img/overlay-bg.jpg)">
+  <div class="overlay-mf"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="contact-mf">
+          <div id="contact" class="box-shadow-full">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="title-box-2">
+                  <h5 class="title-left">
+                    Message Me
+                  </h5>
+                </div>
+                <div>
+                  <div class="row">
+                    <div class="col-md-12 mb-3">
                       <form method="post">
                         {% csrf_token %}
-                        {{ form|crispy }}                       
+                        {{ form|crispy }}
                         <div class="col-md-12 text-center">
                           <button type="submit" class="button button-a button-big button-rouded">Send</button>
                         </div>
                       </form>
                     </div>
                   </div>
-                  </div>
                 </div>
-                {% for t in touch %}
-                <div class="col-md-6">
-                  <div class="title-box-2 pt-4 pt-md-0">
-                    <h5 class="title-left">
-                      Get in Touch
-                    </h5>
-                  </div>
-                  <div class="more-info">
-                    <p class="lead">
-                      {{t.lead}}
-                   
-                    </p>
-                    <ul class="list-ico">
-                      <li><span class="fas fa-map-marker-alt"></span> {{ t.location }}</li>
-                      <li><span class="fas fa-phone-alt"></span> {{ t.telephone }}</li>
-                
-                      <li><a href=""><span class="fas fa-envelope-square"></span>{{ t.email }} </a></li>
-                    </ul>
-                  </div>
-                  <div class="socials">
-                    <ul>
-                      <li><a href="https://web.facebook.com/julius.nartey.71"><span class="ico-circle"><i class="fab fa-facebook-f"></i></span></a></li>
-                      <li><a href="https://instagram.com/narteyjulius2"><span class="ico-circle"><i class="fab fa-instagram"></i></span></a></li>
-                      <li><a href="http://twitter.com/@sylar71845646"><span class="ico-circle"><i class="fab fa-twitter"></i></span></a></li>
-                      <li><a href="https://www.linkedin.com/in/julius-nartey-16b5441bo"><span class="ico-circle"><i class="fab fa-linkedin-in"></i></span></a></li>
-                    </ul>
-                  </div>
-                </div>
-                {% endfor %}
               </div>
+              {% for t in touch %}
+              <div class="col-md-6">
+                <div class="title-box-2 pt-4 pt-md-0">
+                  <h5 class="title-left">
+                    Get in Touch
+                  </h5>
+                </div>
+                <div class="more-info">
+                  <p class="lead">
+                    {{t.lead}}
+
+                  </p>
+                  <ul class="list-ico">
+                    <li><span class="fas fa-map-marker-alt"></span> {{ t.location }}</li>
+                    <li><span class="fas fa-phone-alt"></span> {{ t.telephone }}</li>
+
+                    <li><a href=""><span class="fas fa-envelope-square"></span>{{ t.email }} </a></li>
+                  </ul>
+                </div>
+                <div class="socials">
+                  <ul>
+                    <li><a href="https://web.facebook.com/julius.nartey.71"><span class="ico-circle"><i
+                            class="fab fa-facebook-f"></i></span></a></li>
+                    <li><a href="https://instagram.com/narteyjulius2"><span class="ico-circle"><i
+                            class="fab fa-instagram"></i></span></a></li>
+                    <li><a href="http://twitter.com/@sylar71845646"><span class="ico-circle"><i
+                            class="fab fa-twitter"></i></span></a></li>
+                    <li><a href="https://www.linkedin.com/in/julius-nartey-16b5441b0/"><span class="ico-circle"><i
+                            class="fab fa-linkedin-in"></i></span></a></li>
+                  </ul>
+                </div>
+              </div>
+              {% endfor %}
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>

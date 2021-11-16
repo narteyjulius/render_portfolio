@@ -1,34 +1,36 @@
     <!-- ======= Intro Section ======= -->
     {% for home in home %}
-    <div id="home" class="intro route bg-image" style="background-image: url(https://img-9gag-fun.9cache.com/photo/adLX18Q_700bwp.webp)">
+    <div id="home" class="intro route bg-image"
+      style="background-image: url(https://img-9gag-fun.9cache.com/photo/adLX18Q_700bwp.webp)">
       <!-- <div id="home" class="intro route bg-image" style="background-color:#000000;"> -->
-       
+
       <div class="overlay-itro">
-        
+
       </div>
       <div class="intro-content display-table">
         <div class="table-cell">
           <div class="container">
             <!--<p class="display-6 color-d">Hello, world!</p>-->
             <h1 class="intro-title mb-4">{{ home.name }}</h1>
-            <p class="intro-subtitle"><span class="text-slider-items" >{{ home.intro}}</span><strong  class="text-slider"></strong></p>
+            <p class="intro-subtitle"><span class="text-slider-items">{{ home.intro}}</span><strong
+                class="text-slider"></strong></p>
             <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
           </div>
         </div>
       </div>
     </div><!-- End Intro Section -->
     <main id="main">
-  
+
       <!-- ======= About Section ======= -->
       <section id="about" class="about-mf sect-pt4 route">
-     
+
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
               <div class="box-shadow-full">
                 <div class="row">
                   <div class="col-md-6">
-                  
+
                     <div class="row">
                       <div class="col-sm-6 col-md-5">
                         <div class="about-img">
@@ -45,9 +47,9 @@
                       </div>
                     </div>
                     <div class="skill-mf">
-                      <p class="title-s">Technologise that i use:</p>                  
+                      <p class="title-s">Technologies:</p>
                       <ul style="list-style: none;">
-                        <li><i class="fab fa-html5"> </i>HTMl</li>
+                        <li><i class="fab fa-html5"> </i>HTML</li>
                         <li><i class="fab fa-css3"></i>CSS</li>
                         <li><i class="fab fa-python"></i>Python</li>
                         <li><i class="fab fa-bootstrap"></i>BootStrap</li>
@@ -89,4 +91,5 @@
           </div>
         </div>
       </section>
-      {% endfor %}<!-- End About Section -->
+      {% endfor %}
+      <!-- End About Section -->
