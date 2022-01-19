@@ -27,6 +27,7 @@ class Project(models.Model):
     title = models.CharField(max_length=50, blank=True)
     image = models.ImageField(blank=True)
     link = models.URLField(blank=True)
+    gitlink = models.URLField(blank=True)
 
     def __str__(self):
         return self.title
