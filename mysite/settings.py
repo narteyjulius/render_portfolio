@@ -102,13 +102,24 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd9etnvrlqchd65',
-        'USER': 'qnpqpxylvijwpn',
-        'PASSWORD':'d9c56fa93bbc566c4a2adfee33107d666deba76dc287d15c8fb93c62b11cc334',
-        'HOST': 'ec2-34-205-217-14.compute-1.amazonaws.com',
+        'NAME': 'sylar_portfolio',
+        'USER': 'sylar',
+        'PASSWORD': 'zT70UNWF6mLckhgAWsXPsVfFw1wpEgus',
+        'HOST': 'ccc.oregon-postgres.render.com',
         'PORT': '5432',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'd9etnvrlqchd65',
+#         'USER': 'qnpqpxylvijwpn',
+#         'PASSWORD':'d9c56fa93bbc566c4a2adfee33107d666deba76dc287d15c8fb93c62b11cc334',
+#         'HOST': 'ec2-34-205-217-14.compute-1.amazonaws.com',
+#         'PORT': '5432',
+#     }
+# }
 
 
 
